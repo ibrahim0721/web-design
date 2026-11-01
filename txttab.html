@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="tr">
+    <head>
+    <meta charset="utf-8">
+    <title>ilk htm sa</title>
+</head>
+<body>
+    <details>
+<summary>Kayıt için hangi belgeler gerekli?</summary>
+<p>Kimlik fotokopisi ve öğrenci belgesi yeterlidir.</p>
+</details> 
+
+<button commandfor="onayKutusu" command="show-modal">Kaydı sil</button><dialog id="onayKutusu">
+<form method="dialog">
+<p>Kaydı silmek istediğinize emin misiniz?</p>
+<button value="iptal">Vazgeç</button>
+<button value="sil">Sil</button>
+</form>
+</dialog>
+
+    <table border="1">
+        <caption>aylık maş</caption>
+        <thead><tr>
+            <th>ay</th>
+            <th>maş</th>
+        </tr></thead>
+        <tbody> <tr>
+            <td>
+                ocak
+            </td>
+            <td>
+                24500
+            
+            </td>
+             <td rowspan="3">bu oldu ya</td> 
+        </tr>
+       <tr>
+            <td>
+                
+                şubat
+            </td>
+            <td>
+                23000
+            
+            </td>
+        </tr>
+       
+        <tr>
+            <td>
+                
+                mart
+            </td>
+            <td>
+                22000
+            
+            </td>
+        </tr> 
+        
+    </tbody>
+    <tfoot>
+        <tr><td colspan="2">
+            toplam 50000tl
+        </td></tr>
+    </tfoot>
+       
+    </table>
+   <table border="1">
+  <!-- Tablonun başlığı -->
+  <caption>Örnek Tablo Başlığı</caption>
+
+  <!-- Üst Başlık Alanı -->
+  <thead>
+    <tr>
+      <th scope="col">Başlık 1</th>
+      <th scope="col">Başlık 2</th>
+      <th scope="col">Başlık 3</th>
+    </tr>
+  </thead>
+
+  <!-- Veri Gövdesi -->
+  <tbody>
+    <tr>
+      <th scope="row">Satır Başlığı 1</th>
+      <td>td veri</td>
+      <td>td veri</td>
+    </tr>
+    <tr>
+      <th scope="row">Satır Başlığı 2</th>
+      <td>td veri</td>
+      <td>td veri</td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="6">
+<caption>Haftalık ders programı</caption>
+<thead>
+<tr>
+<th scope="col">Saat</th>
+<th scope="col">Pazartesi</th>
+<th scope="col">Salı</th>
+<th scope="col">Çarşamba</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">09:00</th>
+<td rowspan="2">Web Tasarım</td>
+<td>Matematik</td>
+<td rowspan="2">Veri Tabanı Lab</td>
+</tr>
+<tr>
+<th scope="row">10:00</th>
+<td>Fizik</td>
+</tr>
+<tr>
+<th scope="row">12:00</th>
+<td colspan="3">Öğle arası</td>
+</tr>
+<tr>
+<th scope="row">13:00</th>
+<td>İngilizce</td>
+<td>Programlama</td>
+<td>Ders yok</td>
+</tr>
+</tbody>
+</tabl>
+<img src="https://picsum.photos/id/1018/800/533"
+srcset="https://picsum.photos/id/1018/400/267 400w,
+https://picsum.photos/id/1018/800/533 800w,
+https://picsum.photos/id/1018/1600/1066 1600w"
+sizes="(max-width: 600px) 100vw, 50vw"
+alt="Dağ ve orman manzarası"
+loading="lazy" width="800" height="533">
+<picture>
+<source type="image/webp"
+srcset="https://picsum.photos/id/1025/200/200.webp">
+<img src="https://picsum.photos/id/1025/200/200.jpg" alt="Örnek resim"></picture>
+   altaki herşey tammane video ve musik eklemek için
+<video controls width="640" height="360"
+poster="https://picsum.photos/id/1018/640/360">
+<source src="https://interactive-examples.mdn.mozilla.net/media/cc0-
+videos/flower.mp4" type="video/mp4">
+<source src="https://interactive-examples.mdn.mozilla.net/media/cc0-
+videos/flower.webm" type="video/webm">
+<track src="altyazi-tr.vtt" kind="subtitles"
+srclang="tr" label="Türkçe" default>
+Tarayıcınız videoyu desteklemiyor.
+</video>
+<audio controls>
+<source src="https://interactive-examples.mdn.mozilla.net/media/cc0-
+audio/t-rex-roar.mp3" type="audio/mpeg">
+</audio>
+
+</body>
+</html>
