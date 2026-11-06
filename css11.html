@@ -4,8 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>selector -seçiciler</title>
+    <style>
+        /* *{(bu her şeyi etkiler)
+            color: red;
+        } */
+         /* p{
+            color: red;
+        } */
+         /* p,a,h1,h2,h3,h4,h5,h6{
+            color: red;} */
+
+            /* div p{(bu divdeki tüm elementleri etkiler)
+                color: red;
+            } */
+             /* div>p{(bu divdeki anesi div elementleri etkiler)
+                color: red;} */
+                /* div+p{(bu divden sonraki ilk p elementlerini etkiler)
+                  color: red;
+                } */
+                 /* div~p{(bu divden sonraki tüm p elementlerini etkiler)
+                  color: red;} */
+                  /* div>p:first-child{(anesi div olan ilk çoçuğu sçer )
+                    color: red;
+                  } */
+                   /* div>p:last-child{(anesi div olan son çoçuğu sçer )
+                    color: red; } */
+                    /* div>p:nth-child(n){(anesi div olan n. çoçuğu sçer )
+                        color: red; } */
+                          /* div>nav>a:nth-child(2){(anesi div olan 2. çoçuğu sçer )
+                            color: red; } */
+        /* .div2>ul>li:nth-child(3){
+            color: red;
+        } */
+    </style>
 </head>
 <body>
+    <div>
+        
+           <p>paragraf1</p>
+           <p>paragraf2</p>
+           <p>paragraf3</p>
+           <p>paragraf4</p>
+            <nav>
+                <p>paragraf5</p>
+                <a href="link">bağlantı1</a>
+                <a href="link">bağlantı2</a>
+                <a href="link">bağlantı3</a>
+            </nav>
+
+    </div>
+    <div class="div2">
+        <p>paragraf6</p>
+         <p>paragraf7</p>
+         <p>paragraf8</p>
+         <ul>
+            <li>liste1</li>
+            <li>liste2</li>
+            <li>liste3</li>
+        </ul>
+    </div>
+    <div>
+        <h1> başlık1</h1>
+    </div>
+    <h2>h2 başlık2</h2>
+    <h3>h3 başlık3</h3>
+
     
 </body>
 </html>
