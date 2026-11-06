@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Kart Testi</title>
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #5ab431;
+            font-family: sans-serif;
+            padding: 2rem;
+            margin: 0;
+        }
+
+        /* Flexbox Kapsayıcısı */
+        .kart-listesi {
+            display: flex;
+            flex-direction: row;      /* Kartları yatayda diz */
+            flex-wrap: wrap;          /* Sığmayan alt satıra geçsin */
+            justify-content: center;  /* Kartları yatayda ortala */
+            align-items: stretch;     /* Yükseklikleri eşitle */
+            gap: 1.5rem;              /* Kartlar arası 24px boşluk */
+        }
+
+        /* Kartların Görünür Olmasını Sağlayan Stiller */
+        .kart {
+            background-color: #982020;
+            border: 2px solid #315585;
+            border-radius: 8px;
+            padding: 2rem;
+            width: 200px;             /* Kart genişliği */
+            text-align: center;
+            font-weight: bold;
+            color: #bcc4cb;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="kart-listesi">
+        <div class="kart">Kart 1</div>
+        <div class="kart">Kart 2</div>
+        <div class="kart">Kart 3</div>
+    </div>
+
+</body>
+</html>

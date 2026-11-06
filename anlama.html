@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>*, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        .izgara {
+            display: grid;
+            grid-template-columns: 200px 1fr 2fr;  /* 1. Sütun: 200px, 2. Sütun: 1 Pay, 3. Sütun: 2 Pay */
+            gap: 1rem;                             /* Kutular arası 16px boşluk */
+            background-color: #f0f0f0;
+            padding: 1rem;
+        }
+
+        /* Kutuların görünür olması için eklenen renk ve çerçeve stilleri */
+        .izgara > div {
+            background-color: #4a90e2;
+            color: white;
+            padding: 1.5rem;
+            border-radius: 6px;
+            font-family: sans-serif;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* 2 sütun kaplayan geniş kutu */
+        .genis-kutu { 
+            grid-column: span 2; 
+            
+        }
+</style>
+</head>
+<body>
+    <div class="izgara">
+  <div class="genis-kutu">Kutu 1 (2 Sütun Kaplar)</div>
+  <div>Kutu 2 (1 Sütun Kaplar)</div>
+  <div>Kutu 3</div>
+  <div>Kutu 4</div>
+  <div>Kutu 5</div>
+</div>
+</body>
+</html>

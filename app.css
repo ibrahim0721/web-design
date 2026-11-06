@@ -2,3 +2,112 @@ hı{
     color: red;
     background-color: yellow;
 }
+/* ============================================================
+   Konu 4 çözümü – tanıtım sayfası stili
+   Palet: lacivert (HSL 215) + turuncu vurgu + açık zemin
+   index.html'deki <link> satırıyla yüklenir; kurallar HTML'deki
+   etiket adlarını (body, nav, footer) ve class değerlerini
+   (.kart, .yan, .sayfa-basi) bularak uygulanır.
+   ============================================================ */
+
+/* Sıfırlama: genişlik hesabına padding ve kenarlığı dahil eder.
+   Etkisi: kutular verilen genişlikte kalır, padding/kenarlık eklenince şişmez. 
+   * evrensel seçicidir; sayfadaki tüm HTML elemanlarını seçer
+   */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Renk değişkenleri: paleti tek yerden yönetir.
+   Etkisi: marka rengi değişince yalnız buradaki satır düzeltilir,
+   sayfadaki tüm kullanımlar güncellenir. */
+:root {
+  --lacivert: hsl(215, 60%, 22%);      /* marka rengi: başlık şeridi */
+  --lacivert-acik: hsl(215, 60%, 35%); /* alt bilgi bağlantıları */
+  --turuncu: hsl(28, 90%, 52%);        /* vurgu: kenarlık, odak halkası */
+  --turuncu-acik: #ffd9a8;             /* nav bağlantı metni */
+  --zemin: hsl(210, 30%, 97%);         /* sayfa zemini */
+  --yazi: #24292f;                     /* ana metin rengi */
+}
+
+/* Gövde tipografisi: font zinciri ve genel ölçüler.
+   Etkisi: sayfa açık mavimsi zemin üzerine koyu gri sistem fontuyla ve rahat
+   satır aralığıyla görünür; bu değerler içindeki tüm öğelere kalıtılır. */
+body {
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 1rem;                     /* kök yazı boyutu = 16px */
+  line-height: 1.6;
+  color: var(--yazi);
+  background-color: var(--zemin);
+  margin: 0;                           /* tarayıcının 8px gövde boşluğunu kaldır */
+  padding: 1.5rem;                     /* sayfa kenarlarından 24px iç boşluk */
+}
+
+/* Başlık ölçeği: 2.25rem = 36px, 1.5rem = 24px.
+   Etkisi: h1 ve h2 gövde metninden belirgin büyük görünür. */
+h1 { font-size: 2.25rem; line-height: 1.2; }
+h2 { font-size: 1.5rem;  line-height: 1.2; }
+
+/* Sayfa başlığı şeridi: class="sayfa-basi" olan <header>.
+   Etkisi: lacivert zeminli, beyaz yazılı, yuvarlak köşeli bir şerit;
+   içindeki başlık beyaz, şerit altındaki içerikten 24px ayrık. */
+.sayfa-basi {
+  background: var(--lacivert);
+  color: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+/* Yalnız şeridin içindeki h1 ve p (torun seçici: ".sayfa-basi h1") */
+.sayfa-basi h1 { margin: 0 0 0.25rem; color: #ffffff; }
+.sayfa-basi p  { margin: 0 0 1rem; color: rgba(255, 255, 255, 0.75); } /* yarı saydam beyaz */
+
+/* Menü: nav içindeki listeyi yatay dizer.
+   Etkisi: madde imleri ve girinti kaybolur, bağlantılar yan yana
+   turuncu-açık renkte ve altçizgisiz durur. */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;              /* li'leri yan yana dizer */
+  gap: 1rem;
+}
+nav a {
+  color: var(--turuncu-acik);
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;    /* tıklanabilir alanı büyütür */
+  border-radius: 6px;
+}
+/* Durum seçicileri: aynı bağlantı duruma göre farklı görünür.
+   Etkisi: fare üstündeyken hafif zemin + altçizgi, Tab ile odaklanınca
+   turuncu odak halkası çıkar. */
+nav a:hover  { background: rgba(255, 217, 168, 0.15); text-decoration: underline; }
+nav a:focus  { outline: 3px solid var(--turuncu); outline-offset: 2px; }
+
+/* Kart: class="kart" taşıyan <article> ve <aside> için ortak görünüm.
+   Etkisi: beyaz zeminli, gri kenarlıklı, yuvarlak köşeli kutular;
+   kartların arasında 24px boşluk kalır. */
+.kart {
+  background: #ffffff;
+  border: 2px solid #d0d7de;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+/* .yan: "kart yan" iki sınıfı birlikte alır; sonra yazıldığı için kazanır.
+   Etkisi: aside kartının sol kenarlığı kalın turuncu olur. */
+.yan {
+  border-left: 6px solid var(--turuncu);
+}
+
+/* Alt bilgi: küçük, soluk, ortalanmış yazı (0.875rem = 14px).
+   Etkisi: sayfanın en altında ortalanmış gri telif satırı; bağlantılar
+   açık lacivert, fareyle üstüne gelince altı çizili. */
+footer {
+  font-size: 0.875rem;
+  color: #6b7280;
+  text-align: center;
+  padding: 1rem 0;
+}
+footer a { color: var(--lacivert-acik); }
+footer a:hover { text-decoration: underline; }

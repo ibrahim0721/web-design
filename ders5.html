@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/iletisim" method="post">
+<p>
+<label for="ad">Ad Soyad</label>
+<input type="text" id="ad" name="ad" required
+minlength="3" maxlength="40">
+</p>
+<p>
+<label for="eposta">E-posta</label>
+<input type="email" id="eposta" name="eposta" required>
+</p>
+<p>
+<label for="yas">Yaş</label>
+<input type="number" id="yas" name="yas" min="17" max="80">
+</p>
+<p>
+<label for="kodu">Kod (örn. Aaaaa11)</label>
+<input type="text" id="kodu" name="kodu"
+pattern="[A-Z][a-z]{4}[0-9]{2}" required
+title="Bir büyük harf , ardından 4 küçük harf ve 2 rakamdan oluşan bir kod giriniz.">
+</p>
+<!-- <fieldset>
+<legend>İletişimtercihleri</legend>
+<input type="checkbox" id="eposta" name="bildirim" 
+value="eposta">
+<label for="eposta">E-postailehaberdarolmakistiyorum</label>
+</fieldset> -->
+<p>
+<label>
+<input type="checkbox" name="onay" required>
+KVKK metnini okudum, onaylıyorum
+</label>
+</p>
+
+<p>
+<button type="submit">Gönder</button>
+</p>
+<!-- 1) Acik esleme: for <-> id
+<label for="eposta">E-postaadresiniz</label>
+<input type="email" id="eposta" name="eposta">
+2) Sarmalama (for/id gerekmez) -->
+<!-- <label>
+E-postaadresiniz
+<input type="email" name="eposta">
+</label> -->
+<label for="konu">Mesajınızınkonusu</label>
+<select id="konu" name="konu">
+<optgrouplabel="Ders">
+<option value="odev">Ödev hakkında</option>
+<option value="sinav">Sınavhakkında</option>
+</optgroup>
+</select>
+<label for="mesaj">Mesajınız</label>
+<textarea id="mesaj" name="mesaj" rows="6"></textarea>
+<button type="submit">Gönder</button>
+<button type="button">Taslağıtemizle</button>
+</form>
+</body>
+</html>

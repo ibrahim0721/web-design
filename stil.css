@@ -1,0 +1,65 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+:root {
+  --ana-renk: hsl(215, 60%, 22%);      /* Lacivert */
+  --vurgu-renk: hsl(28, 90%, 52%);     /* Turuncu */
+  --zemin-renk: hsl(210, 30%, 97%);    /* Açık Gri/Mavi Zemin */
+  --yazi-renk: #24292f;                /* Koyu Gri Metin */
+  --kart-zemin: #ffffff;               /* Beyaz Kart */
+}
+body {
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+  padding: 1.5rem;
+  /* var() kullanımı - 1: Zemin Rengi */
+  background-color: var(--zemin-renk); 
+  /* var() kullanımı - 2: Yazı Rengi */
+  color: var(--yazi-renk);
+}
+header, article, aside {
+  background-color: var(--kart-zemin);
+  border: 2px solid #d0d7de;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+/* Header şeridine özel renk dokunuşu */
+header {
+  background-color: var(--ana-renk);
+  color: #ffffff;
+}
+
+/* Aside kartına vurgu kenarlığı */
+aside {
+  border-left: 6px solid var(--vurgu-renk);
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: var(--vurgu-renk);
+  text-decoration: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+/* :hover durumu (Fareyle üstüne gelindiğinde) */
+nav a:hover {
+  background-color: rgba(230, 126, 34, 0.15);
+  text-decoration: underline;
+}
+
+/* :focus durumu (Tab tuşuyla odaklanıldığında) */
+nav a:focus {
+  outline: 3px solid var(--vurgu-renk);
+  outline-offset: 2px;
+}

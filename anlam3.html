@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Kart Duvarı</title>
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #114172;
+            font-family: Arial, sans-serif;
+            padding: 2rem;
+            margin: 0;
+        }
+
+        /* Responsive Grid Kapsayıcısı */
+        .kart-duvari {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+        }
+
+        /* Kart Görünümü */
+        .kart {
+            background-color: #761919;
+            border: 1px solid #e1e4e8;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .kart h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="kart-duvari">
+        <div class="kart">
+            <h3>Kart 1</h3>
+            <p>Ekran genişken yan yana dururlar, ekran daraldıkça otomatik alt satıra geçerler.</p>
+        </div>
+        <div class="kart">
+            <h3>Kart 2</h3>
+            <p>Minimum genişliği 260px olduğu için mobil ekranda tam genişlik kaplar.</p>
+        </div>
+        <div class="kart">
+            <h3>Kart 3</h3>
+            <p>Media query yazmadan esnek tasarım yapmanın en kolay yoludur.</p>
+        </div>
+        <div class="kart">
+            <h3>Kart 4</h3>
+            <p>Boş alan kaldığında 1fr sayesinde tüm genişliği eşit şekilde paylaşırlar.</p>
+        </div>
+    </div>
+
+</body>
+</html>
